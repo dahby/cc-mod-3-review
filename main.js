@@ -2,12 +2,12 @@
 
 const form = document.getElementById('new-movie');
 const container = document.getElementById('container');
-const url = 'http://localhost:3000/movies'
+const url = 'https://raw.githubusercontent.com/dahby/nick-cage-movie-page/master/movies.json'
 
 function fetchAllMovies() {
   fetch(url)
   .then(res => res.json())
-  .then(json => displayAllMovies(json))
+  .then(json => displayAllMovies(json.movies))
 }
 
 function displayAllMovies(allMovies) {
